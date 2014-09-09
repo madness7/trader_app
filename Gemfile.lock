@@ -111,6 +111,9 @@ GEM
       rack (~> 1.0)
     omniauth-facebook (2.0.0)
       omniauth-oauth2 (~> 1.2)
+    omniauth-github (1.1.2)
+      omniauth (~> 1.0)
+      omniauth-oauth2 (~> 1.1)
     omniauth-google-oauth2 (0.2.5)
       omniauth (> 1.0)
       omniauth-oauth2 (~> 1.1)
@@ -216,6 +219,7 @@ DEPENDENCIES
   mandrill_mailer
   meta_request
   omniauth-facebook
+  omniauth-github
   omniauth-google-oauth2
   omniauth-twitter
   pg

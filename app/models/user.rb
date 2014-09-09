@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable, :timeoutable, :omniauthable, :omniauth_providers => [:google_oauth2, :github]
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name, :street, :town, :county, :post_code, :dob
   # attr_accessible :title, :body
 
   has_many :portfolios
@@ -24,7 +24,9 @@ def self.find_for_oauth(kind, auth, signed_in_user=nil)
         return auth_record.user
       else
         user = User.create do |user|
-          user.name = auth.info.name
+          name = auth.info.name.split(' ')
+          user.first_name = name.shift
+          user.last_name = name.join(' ')
           user.email = auth.info.email
           user.password = Devise.friendly_token[0,20]
         end

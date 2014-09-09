@@ -8,7 +8,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
     def handle_callback(kind)
       # You need to implement the method below in your model (e.g. app/models/user.rb)
-      binding.pry
       @user = User.find_for_oauth(kind, request.env["omniauth.auth"], current_user)
 
 

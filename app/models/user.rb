@@ -12,7 +12,6 @@ class User < ActiveRecord::Base
   has_many :stocks, through: :portfolios
   has_many :authentications
 
-end
 
 def self.find_for_oauth(kind, auth, signed_in_user=nil)
 
@@ -49,3 +48,4 @@ def self.find_for_oauth(kind, auth, signed_in_user=nil)
       end
     end
   end
+end

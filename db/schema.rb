@@ -11,7 +11,33 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140908193627) do
+ActiveRecord::Schema.define(:version => 20140909143335) do
+
+  create_table "portfolios", :force => true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "portstocks", :force => true do |t|
+    t.integer  "portfolio_id"
+    t.integer  "stock_id"
+    t.integer  "quantity"
+    t.float    "price_paid"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "stocks", :force => true do |t|
+    t.integer  "portfolio_id"
+    t.integer  "user_id"
+    t.string   "name"
+    t.string   "symbol"
+    t.float    "price"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -30,6 +56,13 @@ ActiveRecord::Schema.define(:version => 20140908193627) do
     t.string   "unconfirmed_email"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "street"
+    t.string   "town"
+    t.string   "county"
+    t.string   "post_code"
+    t.date     "dob"
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true

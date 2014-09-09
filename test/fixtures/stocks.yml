@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  portfolio_id: 1
+  user_id: 1
+  name: MyString
+  symbol: MyString
+  price: 1.5
+
+two:
+  portfolio_id: 1
+  user_id: 1
+  name: MyString
+  symbol: MyString
+  price: 1.5

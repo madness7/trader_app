@@ -1,3 +1,15 @@
+html {
+  background-image: url('trading-background.jpeg');
+  /*background-size: contain;*/
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+   background-size: 100%;
+  /*background-position: top center;*/
+  }
+
 body {
-  background-color: lightblue;
+  width: 960px;
+  margin: 0 auto;
+  background-color: white;
+  opacity: 0.5;
 }

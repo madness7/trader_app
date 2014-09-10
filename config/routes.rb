@@ -28,12 +28,13 @@ TraderApp::Application.routes.draw do
 
   get "portfolios/show"
 
-  devise_for :users
+  devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
   
-  # root to: "#index"
+  root to: "portfolios#index"
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

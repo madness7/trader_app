@@ -9,8 +9,21 @@ html {
   }
 
 body {
-  width: 960px;
+ /* width: 960px;*/
   margin: 0 auto;
   background-color: black;
   /*opacity: 0.5;*/
+  color: white;
+  /*background-color: white;
+  opacity: 0.5;*/
+}
+
+a {
+  text-decoration: none;
+  color: red;
+}
+
+a:hover { 
+  background-color: white;
+  color: blue;
 }

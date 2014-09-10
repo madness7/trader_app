@@ -12,6 +12,7 @@ gem 'devise'               # Authentication
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
+gem 'omniauth-github'
 gem 'ransack'              # Advanced Search
 gem 'mandrill_mailer' 
 

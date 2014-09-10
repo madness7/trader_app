@@ -18,7 +18,9 @@ def self.find_for_oauth(kind, auth, signed_in_user=nil)
     case kind
     when "google", "github"
       if user = signed_in_user || User.find_by_email(auth.info.email)
-        user.name = auth.info.name if user.name.blank?
+        name = auth.info.name.split(' ')
+        user.first_name = name.shift if user.first_name.blank?
+        user.last_name = name.pop if user.last_name.blank?
         user.save
       elsif auth_record = Authentication.find_by_provider_and_uid(auth.provider, auth.uid)
         return auth_record.user
@@ -35,7 +37,7 @@ def self.find_for_oauth(kind, auth, signed_in_user=nil)
       raise NotImplementedError, "why would anybody want this!"
     end
 
-    if @user.persisted?
+    if user.persisted?
       user.authentications.where(auth.slice(:provider, :uid)).first_or_create!
     end
 

@@ -1,0 +1,54 @@
+Opening App:
+  User visit app website
+  Landing Page - Home page (possibly using a home controller and simple view)
+  (automatically detects) If user already logged in then straight to portfolio index page for the user
+  *What do I need to put into the controller / model to achieve this?
+  (manual input) Not registered. Takes user to registration page
+  (manual input) Not Logged in. Takes user to login page
+
+Signing In:
+  Manual sign-in via Devise
+  Oauth sign-in via Google
+  Either option takes user to Portfolios index page
+
+Registering:
+  Manual registration using devise fields
+  Oauth via google
+    Additional information required to satisfy validation requirements
+
+Trading Account creating:
+  (automatically) Set up trading account value
+  User does not set this 
+  Only trading profit or loss can alter the balance after this point
+
+
+Viewing Portfolios:
+  Show All portfolios belonging to the user
+  User can select a specific portfolio - Takes user to Portfolio show page
+  From within this page the user will be able to view all stocks that they own
+
+Viewing Stocks:
+  Stocks index page showing all stocks associated with a specific user account  
+
+Viewing Stock Market:
+  Page showing all Stocks that are avaialable
+    Information gathered from Yahoo finance API with all appropriate information
+    User can search the Stocks (possible use for ransack search)  
+  User can select a particular stock - Which will open other options for them to buy at the current price
+  Takes user to stock purchase page
+
+Buying Stocks:
+  Stocks will be purchased at the current market price.
+  User selects quantity and price and cost is calculated
+  if cost > account balance, purchase fails and the user is notified via alert
+  else the purchased is processed
+    purchased processed
+    account debited
+    stocks added to user stocks
+    stocks added to portfolio
+
+Selling Stocks:
+
+Trading Account Value:
+
+Portfolio Values:

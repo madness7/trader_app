@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Trading App</title>
+    <title>Paper Trader</title>
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
   <body>
+
+    <header class="commonh"> 
+      <h1>'Paper' Trader</h1>
+      <h2> Develop your intuition and acumen </h2>
+    </header>
     <div id="container">
       <div class="user-nav">
         <% if user_signed_in? %>

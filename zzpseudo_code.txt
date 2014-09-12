@@ -15,6 +15,7 @@ Registering:
   Manual registration using devise fields
   Oauth via google
     Additional information required to satisfy validation requirements
+  Takes user to their own portfolios page
 
 Trading Account creating:
   (automatically) Set up trading account value

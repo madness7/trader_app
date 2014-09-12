@@ -1,23 +1,27 @@
  html {
-  background-color: rgba(97,45,10,1.0);
-  /*background-size: contain;*/
- /* background-attachment: fixed;
+  background-image: url('trader.jpeg');
+  /*background-color: rgba(97,45,10,1.0);*/
+  background-size: contain;
+  background-attachment: fixed;
   background-repeat: no-repeat;
-   background-size: 100%;*/
-  /*background-position: top center;*/
+  background-size: 100%;
+  background-position: top center;
  
   }
 
 body {
-  font-family: arial;
+  font-family: 'Open Sans', sans-serif;
   width: 960px;
   background-color: black;
+  opacity: 0.7;
   margin: 0 auto;
   color: rgba(220,117, 25,1.0);
 }
 
 .commonh  {
   text-align: center;
+  border: solid red 2px;
+  display: inline-block;
 }
 
 .commonh h2 {

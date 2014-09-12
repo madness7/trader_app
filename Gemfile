@@ -6,7 +6,7 @@ gem 'rails', '3.2.18'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-gem 'therubyracer'         #javascript interpretot for Ruby
+gem 'therubyracer'         #javascript interpretor for Ruby
 gem 'less-rails-bootstrap' # Twitter Bootstrap
 gem 'devise'               # Authentication
 gem 'omniauth-twitter'

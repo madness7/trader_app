@@ -5,8 +5,11 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable, :timeoutable, :omniauthable, :omniauth_providers => [:google_oauth2]
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name, :street, :town, :county, :post_code, :dob
+  attr_accessible :user_name, :email, :password, :password_confirmation, :remember_me, :first_name, :last_name, :street, :town, :county, :post_code, :dob
   # attr_accessible :title, :body
+
+  validates :user_name, :presence => true, :uniqueness => true
+  validates :email, :password, :password_confirmation, :first_name, :last_name, :street, :post_code, :dob, :presence => true
 
   has_many :portfolios
   has_many :stocks, through: :portfolios

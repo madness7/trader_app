@@ -1,7 +1,7 @@
  html {
   /*background-image: url('trader.jpeg');*/
   /*background-color: rgba(97,45,10,1.0);*/
-  background-color: lightblue;
+  background-color: lightgrey;
   background-size: contain;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -14,9 +14,8 @@ body {
   font-family: 'Open Sans', sans-serif;
   width: 960px;
   background-color: white;
-  border-left: solid black 1em;
-  border-right: solid black 1em;
-  /*opacity: 0.7;*/
+  border-left: solid black 0.2em;
+  border-right: solid black 0.2em;
   margin: 0 auto;
   color: rgb(220,117, 25);
   min-height: 500px;
@@ -28,28 +27,43 @@ h1, h2 {
 
 h1 {
   color: rgb(45,67,136);
+  text-align: center;
 }
 
 h2 {
-  color: rgb(51,137,255); ;
+  color: rgb(51,137,255);
+  font-size: 15px;
 }
 
 #leftheader {
   display: inline-block;
+  border: solid black 0.1em;
 }
 
-/*.commonh  {
-  text-align: center;
-  border: solid red 2px;
+#tagline {
   display: inline-block;
-}*/
+}
+
+.user-nav {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.table {
+  text-align: center;
+}
 
 a {
   text-decoration: none;
   color: rgba(220,117, 25,1.0);
+  border: solid black 1px;
 }
 
 a:hover { 
   background-color: orange;
   color: white;
+}
+
+footer {
+  text-align: center;
 }

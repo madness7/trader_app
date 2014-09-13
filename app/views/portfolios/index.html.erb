@@ -1,2 +1,19 @@
-<h1>Portfolios</h1>
+<h1> Portfolios List</h1>
+
+<div class="table">
+<table>
+  <tr>
+    <th> Name </th>
+    <th> Investor </th>
+  </tr>
+    <% Portfolio.all.each do |pf|%>
+  <tr>
+    <td><%= pf.name %></td>
+    <td><%#= pf.user_id %></td>
+  </tr>
+    <% end %>
+</table>
+</div>
+
+
 

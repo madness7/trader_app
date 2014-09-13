@@ -1,1 +1,5 @@
 # Add stuff to consider - delete before the final commit
+
+#validates_acceptance_of :terms
+#validates_format_of :email, with: regex
+#how to validate age when using :date in devise?

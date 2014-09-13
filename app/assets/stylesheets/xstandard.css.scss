@@ -39,29 +39,24 @@ h2 {
   display: inline-block;
   border: solid black 0.1em;
 }
-
 #tagline {
   display: inline-block;
 }
-
 .user-nav {
   text-align: center;
   margin-top: 2em;
 }
-
-.table {
-  text-align: center;
-}
-
 a {
   text-decoration: none;
   color: rgba(220,117, 25,1.0);
   border: solid black 1px;
 }
-
 a:hover { 
   background-color: orange;
   color: white;
+}
+table, tr, th, td {
+  border: solid black 0.1em;
 }
 
 footer {

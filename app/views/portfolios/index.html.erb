@@ -5,12 +5,18 @@
   <tr>
     <th> Name </th>
     <th> Investor </th>
+    <th> Current Net Value </th>
   </tr>
-    <% Portfolio.all.each do |pf|%>
+    <% portfolios = Portfolio.all %>
+    <% Portfolio.all.each do |ports|%>
   <tr>
-    <td><%= pf.name %></td>
-    <td><%#= pf.user_id %></td>
+    <td><%= ports.name %></td>
+    <td><%= ports.user_id %></td>
+    <td> £10000 </td>
   </tr>
+    <% end %>
+    <% if portfolios.size == 0 %>
+    <em> You Currently have no portfolios </em>
     <% end %>
 </table>
 </div>

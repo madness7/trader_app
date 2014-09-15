@@ -13,3 +13,28 @@
 
 <%= link_to 'Edit', edit_portfolio_path(@portfolio) %> |
 <%= link_to 'Back', portfolios_path %>
+
+
+
+  <div></div>
+  <div></div>
+
+  <table>
+    <tr>
+      <td>Stock Name</td>
+      <td>Symbol</td>
+      <td>Price Paid</td>
+      <td>Number</td>
+    </tr>    
+      <% @portstocks.each do |portstock| %>
+
+      <tr>
+        <td><%= portstock.stock.name %></td>
+        <td><%= portstock.stock.symbol %></td>
+        <td><%= portstock.price_paid %></td>
+        <td>quantity</td>
+      </tr>
+  </table>  
+
+ <!--  p & l = (price_paind - current price)*quantity -->
+<% end %>

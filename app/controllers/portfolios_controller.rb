@@ -72,6 +72,7 @@ class PortfoliosController < ApplicationController
 
   def show
     @portfolio = Portfolio.find(params[:id])
+    @portstocks = @portfolio.portstocks
 
     respond_to do |format|
       format.html # show.html.erb

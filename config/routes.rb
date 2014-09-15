@@ -1,4 +1,6 @@
 TraderApp::Application.routes.draw do
+  resources :portstocks
+
   resources :portfolios
 
   resources :stocks

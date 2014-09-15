@@ -25,6 +25,7 @@
       <td>Symbol</td>
       <td>Price Paid</td>
       <td>Number</td>
+      <td>Portfolio Value (£)</td>
     </tr>    
       <% @portstocks.each do |portstock| %>
 
@@ -33,7 +34,7 @@
         <td><%= portstock.stock.symbol %></td>
         <td><%= portstock.price_paid %></td>
         <td><%= portstock.quantity %></td>
-        <td><%= portstock.quantity * 3 %></td>
+        <td>£<%= portstock.quantity * portstock.price_paid %></td>
       </tr>
       <% end %>
   </table>  

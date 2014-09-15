@@ -1,21 +1,26 @@
 <h1> Portfolios List</h1>
+<%= link_to 'New', new_portfolio_path %>
+<%= link_to 'Stocks', stocks_path %>
 
 <div class="table">
 <table>
   <tr>
-    <td> Name </td>
+    <td> Portfolio Name </td>
     <td> Investor </td>
     <td> Current Net Value </td>
   </tr>
-    <% portfolios = Portfolio.all %>
-    <% Portfolio.all.each do |ports|%>
+    
+    <% @portfolios.all.each do |portfolio|%>
   <tr>
-    <td><%= ports.name %></td>
-    <td><%= ports.user_id %></td>
-    <td> £10000 </td>
+    <td><%= portfolio.name %></td>
+    <td><%= portfolio.user_id %></td>
+    <td>£<%= portfolio.balance %> </td>
+    <td><%= link_to 'Show', portfolio %></td>
+    <td><%= link_to 'Edit', edit_portfolio_path(portfolio) %></td>
+    <td><%= link_to 'Destroy', portfolio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
     <% end %>
-    <% if portfolios.size == 0 %>
+    <% if @portfolios.size == 0 %>
     <em> You Currently have no portfolios </em>
     <% end %>
 </table>

@@ -1,2 +1,29 @@
-<h1>Stocks</h1>
-<p>Find me in app/views/stocks/index.html.erb</p>
+<h1>Listing stocks</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Symbol</th>
+    <th>Price</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @stocks.each do |stock| %>
+  <tr>
+    <td><%= stock.name %></td>
+    <td><%= stock.symbol %></td>
+    <td><%= stock.price %></td>
+    <td><%= link_to 'Show', stock %></td>
+    <td><%= link_to 'Edit', edit_stock_path(stock) %></td>
+    <td><%= link_to 'Destroy', stock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Buy', new_portstock_path %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Stock', new_stock_path %>
+<%= link_to 'Back to Portfolios', portfolios_path %>

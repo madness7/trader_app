@@ -1,2 +1,42 @@
-<h1>Portfolios#show</h1>
-<p>Find me in app/views/portfolios/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @portfolio.name %>
+</p>
+
+<p>
+  <b>Balance:</b>
+  <%= @portfolio.balance %>
+</p>
+
+
+<%= link_to 'Edit', edit_portfolio_path(@portfolio) %> |
+<%= link_to 'Back', portfolios_path %>
+
+
+
+  <div></div>
+  <div></div>
+
+  <table>
+    <tr>
+      <td>Stock Name</td>
+      <td>Symbol</td>
+      <td>Price Paid</td>
+      <td>Number</td>
+      <td>Portfolio Value (£)</td>
+    </tr>    
+      <% @portstocks.each do |portstock| %>
+
+      <tr>
+        <td><%= portstock.stock.name %></td>
+        <td><%= portstock.stock.symbol %></td>
+        <td><%= portstock.price_paid %></td>
+        <td><%= portstock.quantity %></td>
+        <td>£<%= portstock.quantity * portstock.price_paid %></td>
+      </tr>
+      <% end %>
+  </table>  
+
+ <!--  p & l = (price_paind - current price)*quantity -->

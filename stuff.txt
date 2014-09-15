@@ -1,1 +1,32 @@
 # Add stuff to consider - delete before the final commit
+
+#validates_acceptance_of :terms
+#validates_format_of :email, with: regex
+#how to validate age when using :date in devise?
+
+
+# variables needed:
+  # investment = opening_balance_of_trading_account
+  # current = current_share_value
+  # bought = purchase_price
+  # balance = trading_account_balance
+  # volume = number_of_shares_required
+  # position = total_portfolio_value
+  # 
+  # 
+  # 
+  # 
+  # 
+
+
+# Basic Logic for operations.
+# Buying Shares
+  # current   = individual_current_share_price
+  # volume  = number_shares_required
+  # cost    = current * Volume
+  # balance = trading_account_balance
+
+  # if cost > balance (if balance - cost <= 0 ), then the trade fails with error message.
+  # else 
+  # balance = balance - cost
+

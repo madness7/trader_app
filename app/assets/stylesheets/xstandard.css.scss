@@ -1,36 +1,94 @@
  html {
-  background-color: rgba(97,45,10,1.0);
-  /*background-size: contain;*/
- /* background-attachment: fixed;
+  /*background-image: url('trader.jpeg');*/
+  /*background-color: rgba(97,45,10,1.0);*/
+  background-color: lightgrey;
+  background-size: contain;
+  background-attachment: fixed;
   background-repeat: no-repeat;
-   background-size: 100%;*/
-  /*background-position: top center;*/
+  background-size: 100%;
+  background-position: top center;
  
   }
 
 body {
-  font-family: arial;
+  font-family: 'Open Sans', sans-serif;
   width: 960px;
-  background-color: black;
+  background-color: white;
+  border-left: solid black 0.2em;
+  border-right: solid black 0.2em;
   margin: 0 auto;
-  color: rgba(220,117, 25,1.0);
+  color: rgb(220,117, 25);
+  min-height: 500px;
 }
 
-.commonh  {
+h1, h2 {
+  font-weight: 200;
+}
+
+h1 {
+  color: rgb(45,67,136);
   text-align: center;
 }
 
-.commonh h2 {
-  font-size: 1em;
-
+h2 {
+  color: rgb(51,137,255);
+  font-size: 15px;
+  border: sold black 0.1em;
 }
 
+#leftheader {
+  display: inline-block;
+  border: solid black 0.1em;
+}
+#tagline {
+  display: inline-block;
+}
+.user-nav {
+  text-align: center;
+  margin-top: 2em;
+}
 a {
   text-decoration: none;
   color: rgba(220,117, 25,1.0);
+  border: solid black 1px;
 }
-
 a:hover { 
   background-color: orange;
   color: white;
+}
+table {
+    border: solid black 1px;
+    border-collapse: collapse;
+    width: 50%;
+    text-align: left;
+    margin: 0 auto;
+}
+
+table, th, td {
+   color: black;  
+   background-color: white;
+   opacity: 0.5;
+   height: 1em;
+}
+
+th {
+  text-align: center;
+  background-color: lightgrey;
+}
+
+td {
+    height: 1em;
+    vertical-align: middle;
+    font-style: italic;
+}
+/*tr:nth-child(even) and (odd) alternate row colours in the chat table*/
+tr:nth-child(even) {
+  background: #CCC;
+}
+tr:nth-child(odd) {
+  background: #FFF;
+}
+
+footer {
+  text-align: center;
 }

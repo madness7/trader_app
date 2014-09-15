@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140909165927) do
+ActiveRecord::Schema.define(:version => 20140913095956) do
 
   create_table "authentications", :force => true do |t|
     t.string   "provider"
@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(:version => 20140909165927) do
     t.string   "county"
     t.string   "post_code"
     t.date     "dob"
+    t.string   "user_name"
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true

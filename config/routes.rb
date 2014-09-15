@@ -1,34 +1,11 @@
 TraderApp::Application.routes.draw do
+  resources :portstocks
+
+  resources :portfolios
+
+  resources :stocks
   
   get "home/index"
-
-  get "stocks/new"
-
-  get "stocks/create"
-
-  get "stocks/update"
-
-  get "stocks/edit"
-
-  get "stocks/destroy"
-
-  get "stocks/index"
-
-  get "stocks/show"
-
-  get "portfolios/new"
-
-  get "portfolios/create"
-
-  get "portfolios/update"
-
-  get "portfolios/edit"
-
-  get "portfolios/destroy"
-
-  get "portfolios/index"
-
-  get "portfolios/show"
 
   devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
@@ -36,7 +13,7 @@ TraderApp::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
   
-  root to: "home#index"
+  root to: "portfolios#index"
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

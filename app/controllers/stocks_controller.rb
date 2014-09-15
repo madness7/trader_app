@@ -42,6 +42,7 @@ class StocksController < ApplicationController
     end
   end
 
+
   # GET /stocks/1/edit
     def edit
       @stock = Stock.find(params[:id])

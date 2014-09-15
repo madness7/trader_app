@@ -32,9 +32,10 @@
         <td><%= portstock.stock.name %></td>
         <td><%= portstock.stock.symbol %></td>
         <td><%= portstock.price_paid %></td>
-        <td>quantity</td>
+        <td><%= portstock.quantity %></td>
+        <td><%= portstock.quantity * 3 %></td>
       </tr>
+      <% end %>
   </table>  
 
  <!--  p & l = (price_paind - current price)*quantity -->
-<% end %>

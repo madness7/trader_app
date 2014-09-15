@@ -13,11 +13,12 @@
 body {
   font-family: 'Open Sans', sans-serif;
   width: 960px;
-  background-color: white;
+  background-color: black;
   border-left: solid black 0.2em;
   border-right: solid black 0.2em;
   margin: 0 auto;
-  color: rgb(220,117, 25);
+  color: orange;
+  /*color: rgb(220,117, 25);*/
   min-height: 500px;
 }
 
@@ -26,22 +27,31 @@ h1, h2 {
 }
 
 h1 {
-  color: rgb(45,67,136);
+  /*color: rgb(45,67,136);*/
+  color: orange;
   text-align: center;
 }
 
 h2 {
-  color: rgb(51,137,255);
+  color: orange;
+  /*color: rgb(51,137,255);*/
   font-size: 15px;
   border: sold black 0.1em;
 }
 
 #leftheader {
   display: inline-block;
-  border: solid black 0.1em;
+  border: solid orange 0.1em;
 }
 #tagline {
   display: inline-block;
+}
+
+#tagline h2 {
+  margin: 0;
+  border: solid orange 0.1em;
+/*  border-top: solid red 1em;
+  border-bottom: solid blue 1em;*/
 }
 .user-nav {
   text-align: center;
@@ -57,7 +67,7 @@ a:hover {
   color: white;
 }
 table {
-    border: solid black 1px;
+    border: solid orange 0.3em;
     border-collapse: collapse;
     width: 50%;
     text-align: left;

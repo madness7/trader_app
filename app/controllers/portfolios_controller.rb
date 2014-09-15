@@ -81,3 +81,4 @@ class PortfoliosController < ApplicationController
   end
 end
 # @portfolios = current_user.portfolios 
+# @portfolio.portstocks.build - automatically builds an empty portstock.

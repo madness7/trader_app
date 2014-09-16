@@ -15,6 +15,7 @@ gem 'omniauth-google-oauth2'
 gem 'omniauth-github'
 gem 'ransack'              # Advanced Search
 gem 'mandrill_mailer' 
+gem 'yahoo-finance'
 
 # Gems that are required only in development and not in production
 group :development do

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140913095956) do
+ActiveRecord::Schema.define(:version => 20140916123454) do
 
   create_table "authentications", :force => true do |t|
     t.string   "provider"
@@ -26,7 +26,10 @@ ActiveRecord::Schema.define(:version => 20140913095956) do
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.float    "balance"
   end
+
+  add_index "portfolios", ["user_id"], :name => "index_portfolios_on_user_id"
 
   create_table "portstocks", :force => true do |t|
     t.integer  "portfolio_id"
@@ -45,6 +48,8 @@ ActiveRecord::Schema.define(:version => 20140913095956) do
     t.float    "price"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.float    "open"
+    t.string   "date"
   end
 
   create_table "users", :force => true do |t|

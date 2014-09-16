@@ -25,18 +25,20 @@
       <td>Symbol</td>
       <td>Price Paid</td>
       <td>Number</td>
-      <td>Portfolio Value (£)</td>
+      <td>Stock Value (£)</td>
     </tr>    
       <% @portstocks.each do |portstock| %>
 
       <tr>
         <td><%= portstock.stock.name %></td>
         <td><%= portstock.stock.symbol %></td>
-        <td><%= portstock.price_paid %></td>
+        <td>£<%= portstock.price_paid %></td>
         <td><%= portstock.quantity %></td>
         <td>£<%= portstock.quantity * portstock.price_paid %></td>
+        <td><%= link_to 'Sell Stock', portstock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
       <% end %>
   </table>  
+  <p id="buy_stock"><%= link_to 'Buy Stock', new_portstock_path %></p>
 
  <!--  p & l = (price_paind - current price)*quantity -->

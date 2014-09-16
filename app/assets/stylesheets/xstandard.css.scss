@@ -1,6 +1,5 @@
  html {
-  /*background-image: url('trader.jpeg');*/
-  /*background-color: rgba(97,45,10,1.0);*/
+
   background-color: black;
   background-size: contain;
   background-attachment: fixed;
@@ -11,14 +10,14 @@
   }
 
 body {
+  box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
   width: 960px;
   background-color: white;
   border-left: solid black 0.2em;
   border-right: solid black 0.2em;
   margin: 0 auto;
-  color: rgb(154,79,18);
-  /*color: rgb(220,117, 25);*/
+  color: black;
   min-height: 500px;
 }
 
@@ -27,31 +26,31 @@ h1, h2 {
 }
 
 h1 {
-  /*color: rgb(45,67,136);*/
-  color: orange;
+  color: black;
   text-align: center;
 }
 
 h2 {
-  color: orange;
-  /*color: rgb(51,137,255);*/
+  color: black;
   font-size: 15px;
   border: sold black 0.1em;
 }
+span  {
+  font-size: 10px;
+  color: lightgrey;
+}
 
 #leftheader {
-  display: inline-block;
-  border: solid orange 0.1em;
+  display: block;
+  border-bottom: solid black 0.4em;
 }
 #tagline {
-  display: inline-block;
+  display: block;
+  text-align: center;
 }
 
 #tagline h2 {
   margin: 0;
-  border: solid orange 0.1em;
-/*  border-top: solid red 1em;
-  border-bottom: solid blue 1em;*/
 }
 .user-nav {
   text-align: center;
@@ -59,12 +58,18 @@ h2 {
 }
 a {
   text-decoration: none;
-  color: rgba(220,117, 25,1.0);
+  color: black;
   /*border: solid black 1px;*/
 }
 a:hover { 
   background-color: orange;
   color: white;
+}
+
+#yield {
+  text-align: center;
+  border: solid black 0.2em;
+  margin: 2em 3em;
 }
 table {
     border: solid orange 0.3em;
@@ -101,4 +106,6 @@ tr:nth-child(odd) {
 
 footer {
   text-align: center;
+  font-size: 10px;
+  color: red;
 }

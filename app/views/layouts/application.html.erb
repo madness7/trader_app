@@ -11,7 +11,7 @@
     <header id="leftheader"> 
       <h1>The Safe 'Paper' Trader</h1>
     </header>
-    <div id="tagline"><h2> No Need to loose your shirt </h2></div>
+    <div id="tagline"><h2> Trust Your Intuition - <span>just not with real money eh..</span> </h2></div>
       
     
     <div id="container">
@@ -30,13 +30,15 @@
           <%= link_to 'Login', new_user_session_path %>
         <% end %>
       </div>
+      <div id="yield">
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <% end %>
       <%= yield %>
+      </div>
     </div>
 
-    <footer>  </footer>
+    <footer> &#0153; Another 'Need 4 more weeks' production </footer>
   </body>
 </html>
 

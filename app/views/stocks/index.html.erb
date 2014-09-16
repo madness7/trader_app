@@ -3,12 +3,11 @@
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Symbol</th>
-    <th>Price</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <td>Name</td>
+    <td>Symbol</td>
+    <td>Price</td>
+    <td> </td>
+    <td> </td>
   </tr>
 
 <% @stocks.each do |stock| %>
@@ -16,8 +15,6 @@
     <td><%= stock.name %></td>
     <td><%= stock.symbol %></td>
     <td><%= stock.price %></td>
-    <td><%#= link_to 'Open', stock %></td>
-    <td><%#= link_to 'Edit', edit_stock_path(stock) %></td>
     <td><%= link_to 'Delete', stock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <td><%= link_to 'Buy Stock', new_portstock_path(symbol: stock.symbol, stock_id: stock.id) %></td>
   </tr>

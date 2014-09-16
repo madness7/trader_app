@@ -19,10 +19,10 @@
     <td><%#= link_to 'Open', stock %></td>
     <td><%#= link_to 'Edit', edit_stock_path(stock) %></td>
     <td><%= link_to 'Delete', stock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Buy Stock', new_portstock_path(symbol: stock.symbol, stock_id: stock.id) %></td>
   </tr>
 <% end %>
 </table>
-<p id="buy_stock"><%= link_to 'Buy Stock', new_portstock_path %></p>
 
 <br />
 

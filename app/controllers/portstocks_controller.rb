@@ -3,7 +3,7 @@ class PortstocksController < ApplicationController
   # GET /portstocks/new
   # GET /portstocks/new.json
   require 'yahoo_finance'
-  def new
+  def new   
     data = YahooFinance.quotes([params[:symbol]], [:bid])
     @current_price = data[0].bid
    

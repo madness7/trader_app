@@ -1,6 +1,7 @@
 <section>
   <p><%= params[:symbol] %></p>
-  <p>Current price: <%= @current_price %>
+  <p>Current price: <%= @current_price %></p>
+  <input id="current_price" value='<%= @current_price %>' hidden>
 </section>
 
 <%= form_for(@portstock) do |f| %>

@@ -6,17 +6,12 @@
 
 
 # variables needed:
-  # investment = opening_balance_of_trading_account
-  # current = current_share_value
-  # bought = purchase_price
-  # balance = trading_account_balance
-  # volume = number_of_shares_required
-  # position = total_portfolio_value
-  # 
-  # 
-  # 
-  # 
-  # 
+  # Within Portfolio
+    # total stock price = quantity * current price.
+   
+    # 
+    # 
+    # 
 
 
 # Basic Logic for operations.

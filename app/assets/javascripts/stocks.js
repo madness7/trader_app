@@ -6,7 +6,7 @@ $(function() {
 
     if (!isNaN(quantity) && !isNaN(currentPrice)){
         console.log("hello World");
-        var transaction_total = quantity * currentPrice;
+        var transaction_total = (quantity * currentPrice).toFixed(2);
         $("#transaction_total").text(transaction_total);
     }
     })

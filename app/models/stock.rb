@@ -3,6 +3,11 @@ class Stock < ActiveRecord::Base
   has_many :portstocks
   # require 'yahoo_finance'
 
-has_many :portfolios, through: :portstocks
+  has_many :portfolios, through: :portstocks
   
+
+  def current_price
+    data = YahooFinance.quotes([symbol], [:bid])
+    data[0].bid
+  end
 end

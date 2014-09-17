@@ -10,4 +10,8 @@ class Portstock < ActiveRecord::Base
     total_price = quantity * price_paid
     errors.add( :base, "Transactionn cannot be processed , insufficient funds for portfolio.") unless portfolio.balance - total_price >= 0
   end
+
+  def current_price
+    (stock.current_price.to_f * quantity).round(2)
+  end
 end

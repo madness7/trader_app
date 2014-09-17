@@ -22,23 +22,23 @@
   <table>
     <tr>
       <td>Stock Name</td>
-      <td>Symbol</td>
-      <td>Price Paid</td>
+      <td>Price Paid Per Share</td>
       <td>Number</td>
       <td>Stock Value (£)</td>
+      <td>Current Price</td>
     </tr>    
       <% @portstocks.each do |portstock| %>
 
       <tr>
-        <td><%= portstock.stock.name %></td>
-        <td><%= portstock.stock.symbol %></td>
+        <td><%= "(#{portstock.stock.symbol})#{portstock.stock.name}" %></td>
         <td>£<%= portstock.price_paid %></td>
         <td><%= portstock.quantity %></td>
         <td>£<%= portstock.quantity * portstock.price_paid %></td>
+        <td>£<%= portstock.current_price %></td>
         <td><%= link_to 'Sell Stock', portstock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
       <% end %>
   </table>  
-  <p id="buy_stock"><%= link_to 'Buy Stock', new_portstock_path %></p>
+  <p id="choose_symbol"><%= link_to 'Select Stock Symbol' %></p>
 
  <!--  p & l = (price_paind - current price)*quantity -->

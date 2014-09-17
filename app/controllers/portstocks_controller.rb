@@ -52,8 +52,7 @@ class PortstocksController < ApplicationController
 
 
   def create_values_for_new_transaction
-    data = YahooFinance.quotes([params[:symbol]], [:bid])
-    @current_price = data[0].bid
+    @current_price = Stock.find_by_symbol(params[:symbol]).current_price
     
     @portfolios = current_user.portfolios
   end

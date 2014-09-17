@@ -1,6 +1,5 @@
 <h1>Listing stocks</h1>
 
-
 <table>
   <tr>
     <td>Name</td>
@@ -19,6 +18,16 @@
 <% end %>
 </table>
 <p><%= paginate @stocks %></p>
+
+<%= search_form_for @q do |f| %>
+  <p>
+    <%= f.label :name_cont %>
+    <%= f.text_field :name_cont %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
 
 <br />
 

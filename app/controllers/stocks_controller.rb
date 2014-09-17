@@ -63,7 +63,9 @@ class StocksController < ApplicationController
   # GET /stocks
   # GET /stocks.json
   def index
-    @stocks = Stock.order(:name).page(params[:page])
+    @q = Stock.search(params[:q])
+    @stocks = @q.result(distinct: true).order(:name).page(params[:page])
+    # @stocks = Stock.order(:name).page(params[:page])
 
     respond_to do |format|
       format.html # index.html.erb

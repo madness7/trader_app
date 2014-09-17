@@ -57,6 +57,7 @@ span  {
   text-align: right;
   margin-right: 0.2em;
   margin-bottom: 1em;
+  color: red;
 }
 
 #user_message {
@@ -111,6 +112,11 @@ tr:nth-child(odd) {
 }
 nav {
   text-align: center;
+  color: blue;
+}
+
+nav a {
+  color: blue;
 }
 
 footer {

@@ -1,6 +1,6 @@
 require 'nokogiri'
 require 'open-uri'
-require "pry"
+
 
 begin_time = Time.now
 

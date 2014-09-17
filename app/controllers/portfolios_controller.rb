@@ -62,7 +62,7 @@ class PortfoliosController < ApplicationController
 
  def index
     @portfolios = current_user.portfolios
-    # binding.pry
+    
 
     respond_to do |format|
       format.html # index.html.erb

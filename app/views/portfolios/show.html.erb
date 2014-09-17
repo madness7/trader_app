@@ -36,7 +36,7 @@
         <td><%= portstock.quantity %></td>
         <td>£<%= portstock.quantity * portstock.price_paid %></td>
         <td>£<%= portstock.current_price %></td>
-        <td><%= link_to 'Sell Stock', portstock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Sell', portstock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
       <% end %>
   </table>  

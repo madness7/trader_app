@@ -11,7 +11,7 @@
 
 body {
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Courier', sans-serif;
   width: 960px;
   background-color: white;
   border-left: solid black 0.2em;
@@ -50,16 +50,22 @@ span  {
 }
 
 #tagline h2 {
-  margin: 0;
+  margin-top: 0.2em;
+  margin-bottom: 1em
 }
 .user-nav {
-  text-align: center;
-  margin-top: 2em;
+  text-align: right;
+  margin-right: 0.2em;
+  margin-bottom: 1em;
+}
+
+#user_message {
+  text-align: right;
+  margin-right: 0.2em;
 }
 a {
   text-decoration: none;
   color: black;
-  /*border: solid black 1px;*/
 }
 a:hover { 
   background-color: orange;
@@ -67,12 +73,13 @@ a:hover {
 }
 
 #yield {
+  min-height: 40em;
   text-align: center;
   border: solid black 0.2em;
   margin: 2em 3em;
 }
 table {
-    border: solid black 0.3em;
+    background-color: black;
     border-collapse: collapse;
     width: 90%;
     text-align: left;
@@ -102,9 +109,13 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
   background: #FFF;
 }
+nav {
+  text-align: center;
+}
 
 footer {
   text-align: center;
   font-size: 10px;
   color: red;
+  margin-bottom: 1em;
 }

@@ -20,8 +20,7 @@
 
   <div class="field">
     <%= f.hidden_field :stock_id, :value => params['stock_id'] %>
-    <%#= f.collection_select :stock_id, Stock.all, :id, :name %>
-
+    <%= hidden_field_tag :symbol, params['symbol'] %>
 
       <div id="transaction_total">
 

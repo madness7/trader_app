@@ -1,7 +1,6 @@
 <section>
   <p><%= params[:symbol] %></p>
   <p>Current price: <%= @current_price %></p>
-  <input id="current_price" value='<%= @current_price %>' type = hidden>
 </section>
 
 <%= form_for(@portstock) do |f| %>
@@ -20,6 +19,8 @@
   <div class="field">
     <%= f.hidden_field :stock_id, :value => params['stock_id'] %>
     <%#= f.collection_select :stock_id, Stock.all, :id, :name %>
+
+
       <div id="transaction_total">
 
       </div>
@@ -33,10 +34,7 @@
     <%= f.label :quantity %><br />
     <%= f.number_field :quantity %>
   </div>
-  <div class="field">
-    <%= f.label :price_paid %><br />
-    <%= f.text_field :price_paid %>
-  </div>
+    <%= f.hidden_field :price_paid, value: @current_price %>
   <div class="actions">
     <%= f.submit %>
   </div>

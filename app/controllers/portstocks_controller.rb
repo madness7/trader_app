@@ -1,14 +1,11 @@
 class PortstocksController < ApplicationController
+  before_filter :create_values_for_new_transaction, only: :new
   # require 'yahoo_finance'
   # GET /portstocks/new
   # GET /portstocks/new.json
   require 'yahoo_finance'
   def new   
-    data = YahooFinance.quotes([params[:symbol]], [:bid])
-    @current_price = data[0].bid
-   
     @portstock = Portstock.new
-    @portfolios = current_user.portfolios
 
     respond_to do |format|
       format.html # new.html.erb
@@ -30,6 +27,7 @@ class PortstocksController < ApplicationController
         format.html { redirect_to @portfolio}
         format.json { render json: @portstock, status: :created, location: @portstock }
       else
+        create_values_for_new_transaction
         format.html { render action: "new" }
         format.json { render json: @portstock.errors, status: :unprocessable_entity }
       end
@@ -50,5 +48,13 @@ class PortstocksController < ApplicationController
       format.html { redirect_to @portfolio }
       format.json { head :no_content }
     end
+  end
+
+
+  def create_values_for_new_transaction
+    data = YahooFinance.quotes([params[:symbol]], [:bid])
+    @current_price = data[0].bid
+    
+    @portfolios = current_user.portfolios
   end
 end

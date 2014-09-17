@@ -2,7 +2,7 @@ $(function() {
     
     $('#portstock_quantity').on('change', function(){
      var quantity = parseInt($('#portstock_quantity').val());
-     var currentPrice = parseFloat($('#current_price').val());
+     var currentPrice = parseFloat($('#portstock_price_paid').val());
 
     if (!isNaN(quantity) && !isNaN(currentPrice)){
         console.log("hello World");

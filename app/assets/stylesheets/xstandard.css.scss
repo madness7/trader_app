@@ -1,5 +1,5 @@
  html {
-
+  /*background-image: url('background.jpeg');*/
   background-color: black;
   background-size: contain;
   background-attachment: fixed;
@@ -14,6 +14,7 @@ body {
   font-family: 'Courier', sans-serif;
   width: 960px;
   background-color: white;
+  opacity: 0.8;
   border-left: solid black 0.2em;
   border-right: solid black 0.2em;
   margin: 0 auto;
@@ -35,11 +36,19 @@ h2 {
   font-size: 15px;
   border: sold black 0.1em;
 }
-span  {
+#joke  {
   font-size: 10px;
   color: lightgrey;
 }
-
+#h1stock {
+  color: red;
+}
+#h1trader {
+  color: green
+}
+#h1sandbox {
+  color: blue
+}
 #leftheader {
   display: block;
   border-bottom: solid black 0.4em;
@@ -55,14 +64,17 @@ span  {
 }
 .user-nav {
   text-align: right;
-  margin-right: 0.2em;
+  margin-right: 0.4em;
   margin-bottom: 1em;
   color: red;
 }
 
 #user_message {
   text-align: right;
-  margin-right: 0.2em;
+  margin-right: 0.4em;
+}
+.user-nav a {
+color: red;
 }
 a {
   text-decoration: none;
@@ -101,7 +113,8 @@ th {
 td {
     height: 1em;
     vertical-align: middle;
-    font-style: italic;
+    font: italic bold;
+
 }
 /*tr:nth-child(even) and (odd) alternate row colours in the chat table*/
 tr:nth-child(even) {
@@ -110,12 +123,13 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
   background: #FFF;
 }
-nav {
+
+.nav {
   text-align: center;
   color: blue;
 }
 
-nav a {
+.nav a {
   color: blue;
 }
 

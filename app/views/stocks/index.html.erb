@@ -4,7 +4,7 @@
   <tr>
     <td>Name</td>
     <td>Symbol</td>
-    <td>Price</td>
+    <td>Current Price</td>
     <td>Purchase</td>
   </tr>
 
@@ -13,7 +13,7 @@
     <td><%= stock.name %></td>
     <td><%= stock.symbol %></td>
     <td><%= stock.price %></td>
-    <td><%= link_to 'Buy Stock', new_portstock_path(symbol: stock.symbol, stock_id: stock.id) %></td>
+    <td><%= link_to 'Buy', new_portstock_path(symbol: stock.symbol, stock_id: stock.id) %></td>
   </tr>
 <% end %>
 </table>

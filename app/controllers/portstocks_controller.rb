@@ -52,8 +52,12 @@ class PortstocksController < ApplicationController
 
 
   def create_values_for_new_transaction
-    @current_price = Stock.find_by_symbol(params[:symbol]).current_price
-    
+    if params[:symbol]
+      @current_price = Stock.find_by_symbol(params[:symbol]).current_price
+    else
+      @current_price = Stock.find_by_symbol(params[:portstock][:stock_id]).current_price
+    end  
     @portfolios = current_user.portfolios
   end
+  
 end

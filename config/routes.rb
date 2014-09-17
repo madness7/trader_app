@@ -3,7 +3,9 @@ TraderApp::Application.routes.draw do
 
   resources :portfolios
 
-  resources :stocks
+  resources :stocks do
+    get 'page/:page', action: :index, on: :collection
+  end
   
   get "home/index"
 

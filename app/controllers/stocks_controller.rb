@@ -63,7 +63,7 @@ class StocksController < ApplicationController
   # GET /stocks
   # GET /stocks.json
   def index
-    @stocks = Stock.all
+    @stocks = Stock.order(:name).page(params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -74,7 +74,7 @@ class StocksController < ApplicationController
   # GET /stocks/1
     # GET /stocks/1.json
     def show
-      @stock = Stock.find(params[:id])
+      @stocks = Stock.find(params[:id])
 
       respond_to do |format|
         format.html # show.html.erb

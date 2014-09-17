@@ -6,8 +6,7 @@
     <td>Name</td>
     <td>Symbol</td>
     <td>Price</td>
-    <td> </td>
-    <td> </td>
+    <td>Purchase</td>
   </tr>
 
 <% @stocks.each do |stock| %>
@@ -15,14 +14,12 @@
     <td><%= stock.name %></td>
     <td><%= stock.symbol %></td>
     <td><%= stock.price %></td>
-    <td><%= link_to 'Update', edit_stock_path(stock) %></td>
-    <td><%= link_to 'Delete', stock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <td><%= link_to 'Buy Stock', new_portstock_path(symbol: stock.symbol, stock_id: stock.id) %></td>
   </tr>
 <% end %>
 </table>
+<p><%= paginate @stocks %></p>
 
 <br />
 
-<%= link_to 'New Stock', new_stock_path %>
 <%= link_to 'Back to Portfolios', portfolios_path %>

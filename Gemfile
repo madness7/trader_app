@@ -17,6 +17,7 @@ gem 'ransack'              # Advanced Search
 gem 'mandrill_mailer' 
 gem 'yahoo-finance'
 gem "nokogiri"
+gem 'kaminari'
 # Gems that are required only in development and not in production
 group :development do
   gem 'pry-rails'

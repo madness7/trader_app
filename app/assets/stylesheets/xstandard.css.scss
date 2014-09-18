@@ -14,7 +14,6 @@ body {
   font-family: 'Courier', sans-serif;
   width: 960px;
   background-color: white;
-  opacity: 0.8;
   border-left: solid black 0.2em;
   border-right: solid black 0.2em;
   margin: 0 auto;
@@ -40,7 +39,7 @@ h2 {
   font-size: 10px;
   color: lightgrey;
 }
-#h1stock {
+/*#h1stock {
   color: red;
 }
 #h1trader {
@@ -48,7 +47,7 @@ h2 {
 }
 #h1sandbox {
   color: blue
-}
+}*/
 #leftheader {
   display: block;
   border-bottom: solid black 0.4em;

@@ -1,6 +1,6 @@
 class PortstocksController < ApplicationController
   before_filter :create_values_for_new_transaction, only: :new
-  # require 'yahoo_finance'
+
   # GET /portstocks/new
   # GET /portstocks/new.json
   require 'yahoo_finance'

@@ -22,6 +22,7 @@ body {
 }
 
 h1, h2 {
+  font-family: arial;
   font-weight: 200;
 }
 
@@ -30,24 +31,21 @@ h1 {
   text-align: center;
 }
 
+#headline {
+  font-family: arial; 
+}
+
 h2 {
   color: black;
   font-size: 15px;
   border: sold black 0.1em;
 }
 #joke  {
+  font-family: arial;
   font-size: 10px;
   color: lightgrey;
 }
-/*#h1stock {
-  color: red;
-}
-#h1trader {
-  color: green
-}
-#h1sandbox {
-  color: blue
-}*/
+
 #leftheader {
   display: block;
   border-bottom: solid black 0.4em;
@@ -55,6 +53,7 @@ h2 {
 #tagline {
   display: block;
   text-align: center;
+  font-family: arial;
 }
 
 #tagline h2 {
@@ -62,6 +61,7 @@ h2 {
   margin-bottom: 1em
 }
 .user-nav {
+  font-family: arial;
   text-align: right;
   margin-right: 0.4em;
   margin-bottom: 1em;
@@ -69,6 +69,7 @@ h2 {
 }
 
 #user_message {
+  font-family: arial;
   text-align: right;
   margin-right: 0.4em;
 }
@@ -129,10 +130,12 @@ tr:nth-child(odd) {
 }
 
 .nav a {
+  font-family: arial;
   color: blue;
 }
 
 footer {
+  font-family: arial;
   text-align: center;
   font-size: 10px;
   color: red;

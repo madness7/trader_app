@@ -3,23 +3,23 @@
 <% link_to 'Stock Index', stocks_path %>
 
 <div class="table">
-<table>
-  <tr>
-    <td> Portfolio Name </td>
-    <td> Value </td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
+    <table>
+      <tr>
+        <td> Portfolio Name </td>
+        <td> Value </td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
     
     <% @portfolios.all.each do |portfolio|%>
-  <tr>
-    <td><%= portfolio.name %></td>
-    <td>£<%= portfolio.balance %> </td>
-    <td><%= link_to 'View', portfolio %></td>
-    <td><%= link_to 'Update', edit_portfolio_path(portfolio) %></td>
-    <td><%= link_to 'Delete', portfolio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+    <tr>
+        <td><%= portfolio.name %></td>
+        <td>£<%= portfolio.balance %> </td>
+        <td><%= link_to 'View', portfolio %></td>
+        <td><%= link_to 'Update', edit_portfolio_path(portfolio) %></td>
+        <td><%= link_to 'Delete', portfolio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
     <% end %>
     <% if @portfolios.size == 0 %>
     <em> You Currently have no portfolios. Select from the menu above to create one </em>

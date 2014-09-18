@@ -114,9 +114,8 @@ td {
     height: 1em;
     vertical-align: middle;
     font: italic bold;
-
 }
-/*tr:nth-child(even) and (odd) alternate row colours in the chat table*/
+
 tr:nth-child(even) {
   background: #CCC;
 }

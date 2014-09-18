@@ -14,31 +14,29 @@
 <%= link_to 'Edit', edit_portfolio_path(@portfolio) %> |
 <%= link_to 'Back', portfolios_path %>
 
+<div></div>
+<div></div>
 
+<table>
+  <tr>
+    <td>Stock Name</td>
+    <td>Paid / Share</td>
+    <td>Number</td>
+    <td>Stock Value (£)</td>
+    <td>Current Price</td>
+    <td></td>
+  </tr>    
+  <% @portstocks.each do |portstock| %>
 
-  <div></div>
-  <div></div>
-
-  <table>
-    <tr>
-      <td>Stock Name</td>
-      <td>Paid / Share</td>
-      <td>Number</td>
-      <td>Stock Value (£)</td>
-      <td>Current Price</td>
-      <td></td>
-    </tr>    
-      <% @portstocks.each do |portstock| %>
-
-      <tr>
-        <td><%= "(#{portstock.stock.symbol})#{portstock.stock.name}" %></td>
-        <td>£<%= portstock.price_paid %></td>
-        <td><%= portstock.quantity %></td>
-        <td>£<%= portstock.quantity * portstock.price_paid %></td>
-        <td>£<%= portstock.current_price %></td>
-        <td><%= link_to 'Sell', portstock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-      <% end %>
-  </table>  
-  <p><%= link_to 'Stock Index', stocks_path %></p>
+  <tr>
+    <td><%= "(#{portstock.stock.symbol})#{portstock.stock.name}" %></td>
+    <td>£<%= portstock.price_paid %></td>
+    <td><%= portstock.quantity %></td>
+    <td>£<%= portstock.quantity * portstock.price_paid %></td>
+    <td>£<%= portstock.current_price %></td>
+    <td><%= link_to 'Sell', portstock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+  <% end %>
+</table>  
+<p><%= link_to 'Stock Index', stocks_path %></p>
 

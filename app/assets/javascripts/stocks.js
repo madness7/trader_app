@@ -1,3 +1,5 @@
+// shows the potential transaction value.
+
 $(function() {
     
     $('#portstock_quantity').on('change', function(){

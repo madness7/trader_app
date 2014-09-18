@@ -24,9 +24,9 @@
         </b>
         Start Trading
       </div>
-        <div class="user-nav">
+      <div class="user-nav">
         <% link_to 'Edit Profile', edit_user_registration_path %>
-      
+        
         <%= link_to 'Logout',  destroy_user_session_path, method: :delete %>
         <% else %>
         <%= link_to 'Sign up', new_user_registration_path %>
@@ -50,12 +50,12 @@
       </div>
     </div>
 
-      <nav class="nav">
-        <a href="/">Home</a> |
-        <a href="/">Portfolio Home</a> |
-        <a href="/portfolios/new">Portfolio New</a> |
-        <a href="/stocks">Stock Index</a> |
-      </nav>
+    <nav class="nav">
+      <a href="/">Home</a> |
+      <a href="/">Portfolio Home</a> |
+      <a href="/portfolios/new">Portfolio New</a> |
+      <a href="/stocks">Stock Index</a> |
+    </nav>
     <br>
 
     <footer> Another Web Resource produced using &#0153;'JUST NOT IN TIME' development methodology. 

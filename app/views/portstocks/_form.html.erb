@@ -4,39 +4,39 @@
 </section>
 
 <%= form_for(@portstock) do |f| %>
-  <% if @portstock.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@portstock.errors.count, "error") %> prohibited this portstock from being saved:</h2>
+<% if @portstock.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@portstock.errors.count, "error") %> prohibited this portstock from being saved:</h2>
 
-      <ul>
-      <% @portstock.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <ul>
+    <% @portstock.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
 
-  <div ></div>
+<div ></div>
 
-  <div class="field">
-    <%= f.hidden_field :stock_id, :value => params['stock_id'] %>
-    <%= hidden_field_tag :symbol, params['symbol'] %>
+<div class="field">
+  <%= f.hidden_field :stock_id, :value => params['stock_id'] %>
+  <%= hidden_field_tag :symbol, params['symbol'] %>
 
-      <div id="transaction_total">
-
-      </div>
+  <div id="transaction_total">
 
   </div>
-  <div class="field">
-    <%= f.label :portfolio_id %><br />
-    <%= f.collection_select :portfolio_id, @portfolios, :id, :name %>
-  </div>
-  <div class="field">
-    <%= f.label :quantity %><br />
-    <%= f.number_field :quantity %>
-  </div>
-    <%= f.hidden_field :price_paid, value: @current_price %>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+</div>
+<div class="field">
+  <%= f.label :portfolio_id %><br />
+  <%= f.collection_select :portfolio_id, @portfolios, :id, :name %>
+</div>
+<div class="field">
+  <%= f.label :quantity %><br />
+  <%= f.number_field :quantity %>
+</div>
+<%= f.hidden_field :price_paid, value: @current_price %>
+<div class="actions">
+  <%= f.submit %>
+</div>
 <% end %>

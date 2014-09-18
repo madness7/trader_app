@@ -1,13 +1,13 @@
 <h1>Live Stock Index</h1>
 
 <%= search_form_for @q do |f| %>
-  <p>
-    <%= f.label "Search by Stock Name" %>
-    <%= f.text_field :name_cont %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
+<p>
+  <%= f.label "Search by Stock Name" %>
+  <%= f.text_field :name_cont %>
+</p>
+<p>
+  <%= f.submit %>
+</p>
 <% end %>
 <p><%= paginate @stocks %></p>
 <table>
@@ -18,14 +18,14 @@
     <td>Purchase</td>
   </tr>
 
-<% @stocks.each do |stock| %>
+  <% @stocks.each do |stock| %>
   <tr>
     <td><%= stock.name %></td>
     <td><%= stock.symbol %></td>
     <td><%= stock.current_price %></td>
     <td><%= link_to 'Buy', new_portstock_path(symbol: stock.symbol, stock_id: stock.id) %></td>
   </tr>
-<% end %>
+  <% end %>
 </table>
 <p><%= paginate @stocks %></p>
 

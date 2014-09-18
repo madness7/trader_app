@@ -1,45 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Paper Trader</title>
-    <%= stylesheet_link_tag    "application", :media => "all" %>
-    <%= javascript_include_tag "application" %>
-    <%= csrf_meta_tags %>
-  </head>
-  <body>
+<head>
+  <title>Stock Trader SandBox</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
 
-    <header id="leftheader"> 
-      <h1>
-        <a href="/">The Safe 'Paper' Trader</a></h1>
+  <header id="leftheader"> 
+    <h1>
+      <a href="/"><span id="headline"> Stock Trader SandBox </span></a></h1>
     </header>
-    <div id="tagline"><h2> Trust Your Intuition - <span>just not with real money eh..</span> </h2></div>
-      
+    <div id="tagline"><h2> Trust Your Intuition - <span id="joke">Just not with real money ehh..!</span> </h2></div>
+
     
     <div id="container">
-      <div class="user-nav">
+      <div id="user_message">
         <% if user_signed_in? %>
-          Logged in as
-          <b>
-            <%= current_user.email %>
-          </b>
-          <%= link_to 'Edit Profile', edit_user_registration_path %>
-          |
-          <%= link_to 'Logout',  destroy_user_session_path, method: :delete %>
+        Welcome
+        <b>
+          <%= current_user.user_name %>
+        </b>
+        Start Trading
+      </div>
+        <div class="user-nav">
+        <% link_to 'Edit Profile', edit_user_registration_path %>
+      
+        <%= link_to 'Logout',  destroy_user_session_path, method: :delete %>
         <% else %>
-          <%= link_to 'Sign up', new_user_registration_path %>
-          |
-          <%= link_to 'Login', new_user_session_path %>
+        <%= link_to 'Sign up', new_user_registration_path %>
+        |
+        <%= link_to 'Login', new_user_session_path %>
         <% end %>
       </div>
+
+      <nav class="nav">
+        <a href="/portfolios/new">Portfolio New</a> |
+        <a href="/">Your Portfolios</a> |
+        <a href="/stocks">Stock List</a> |
+        <a href="/users/edit">Edit User Profile</a> 
+      </nav>
+
       <div id="yield">
-      <% flash.each do |name, msg| %>
+        <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <% end %>
-      <%= yield %>
+        <% end %>
+        <%= yield %>
       </div>
     </div>
 
-    <footer> &#0153; Another 'Need 4 more weeks' production </footer>
+      <nav class="nav">
+        <a href="/">Home</a> |
+        <a href="/">Portfolio Home</a> |
+        <a href="/portfolios/new">Portfolio New</a> |
+        <a href="/stocks">Stock Index</a> |
+      </nav>
+    <br>
+
+    <footer> Another Web Resource produced using &#0153;'JUST NOT IN TIME' development methodology. 
+    </footer>
   </body>
-</html>
+  </html>
 

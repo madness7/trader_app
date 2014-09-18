@@ -22,10 +22,11 @@
   <table>
     <tr>
       <td>Stock Name</td>
-      <td>Price Paid Per Share</td>
+      <td>Paid / Share</td>
       <td>Number</td>
       <td>Stock Value (£)</td>
       <td>Current Price</td>
+      <td></td>
     </tr>    
       <% @portstocks.each do |portstock| %>
 
@@ -35,7 +36,7 @@
         <td><%= portstock.quantity %></td>
         <td>£<%= portstock.quantity * portstock.price_paid %></td>
         <td>£<%= portstock.current_price %></td>
-        <td><%= link_to 'Sell Stock', portstock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Sell', portstock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
       <% end %>
   </table>  

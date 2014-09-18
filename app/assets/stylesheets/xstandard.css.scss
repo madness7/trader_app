@@ -1,5 +1,5 @@
  html {
-
+  /*background-image: url('background.jpeg');*/
   background-color: black;
   background-size: contain;
   background-attachment: fixed;
@@ -11,7 +11,7 @@
 
 body {
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Courier', sans-serif;
   width: 960px;
   background-color: white;
   border-left: solid black 0.2em;
@@ -22,6 +22,7 @@ body {
 }
 
 h1, h2 {
+  font-family: arial;
   font-weight: 200;
 }
 
@@ -30,12 +31,17 @@ h1 {
   text-align: center;
 }
 
+#headline {
+  font-family: arial; 
+}
+
 h2 {
   color: black;
   font-size: 15px;
   border: sold black 0.1em;
 }
-span  {
+#joke  {
+  font-family: arial;
   font-size: 10px;
   color: lightgrey;
 }
@@ -47,19 +53,32 @@ span  {
 #tagline {
   display: block;
   text-align: center;
+  font-family: arial;
 }
 
 #tagline h2 {
-  margin: 0;
+  margin-top: 0.2em;
+  margin-bottom: 1em
 }
 .user-nav {
-  text-align: center;
-  margin-top: 2em;
+  font-family: arial;
+  text-align: right;
+  margin-right: 0.4em;
+  margin-bottom: 1em;
+  color: red;
+}
+
+#user_message {
+  font-family: arial;
+  text-align: right;
+  margin-right: 0.4em;
+}
+.user-nav a {
+color: red;
 }
 a {
   text-decoration: none;
   color: black;
-  /*border: solid black 1px;*/
 }
 a:hover { 
   background-color: orange;
@@ -67,14 +86,15 @@ a:hover {
 }
 
 #yield {
+  min-height: 40em;
   text-align: center;
   border: solid black 0.2em;
   margin: 2em 3em;
 }
 table {
-    border: solid orange 0.3em;
+    background-color: black;
     border-collapse: collapse;
-    width: 50%;
+    width: 90%;
     text-align: left;
     margin: 0 auto;
 }
@@ -82,7 +102,6 @@ table {
 table, th, td {
    color: black;  
    background-color: white;
-   opacity: 0.5;
    height: 1em;
 }
 
@@ -94,7 +113,8 @@ th {
 td {
     height: 1em;
     vertical-align: middle;
-    font-style: italic;
+    font: italic bold;
+
 }
 /*tr:nth-child(even) and (odd) alternate row colours in the chat table*/
 tr:nth-child(even) {
@@ -104,8 +124,20 @@ tr:nth-child(odd) {
   background: #FFF;
 }
 
+.nav {
+  text-align: center;
+  color: blue;
+}
+
+.nav a {
+  font-family: arial;
+  color: blue;
+}
+
 footer {
+  font-family: arial;
   text-align: center;
   font-size: 10px;
   color: red;
+  margin-bottom: 1em;
 }

@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
   validates :user_name, :presence => true, :uniqueness => true
-  validates :email, :password, :password_confirmation, :first_name, :last_name, :street, :post_code, :dob, :presence => true
+  validates :email, :password, :password_confirmation, :first_name, :last_name, :presence => true
 
   has_many :portfolios
   has_many :stocks, through: :portfolios
